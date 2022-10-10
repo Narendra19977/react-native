@@ -12,6 +12,7 @@ import {TextInput, TouchableOpacity} from 'react-native-gesture-handler';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import COLORS from '../../consts/colors';
 import plants from '../../consts/plants';
+import { plantText } from '../../consts/plantText';
 const width = Dimensions.get('window').width / 2 - 30;
 
 const HomeScreen = ({navigation}) => {
@@ -113,9 +114,9 @@ const HomeScreen = ({navigation}) => {
       style={{flex: 1, paddingHorizontal: 20, backgroundColor: COLORS.white}}>
       <View style={style.header}>
         <View>
-          <Text style={{fontSize: 25, fontWeight: 'bold'}}>Welcome to</Text>
+          <Text style={{fontSize: 25, fontWeight: 'bold'}}>{plantText.welcomeTo}</Text>
           <Text style={{fontSize: 38, color: COLORS.green, fontWeight: 'bold'}}>
-            Plant Shop
+            {plantText.plantShop}
           </Text>
         </View>
         <Icon name="shopping-cart" size={28} />
